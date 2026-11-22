@@ -1,73 +1,132 @@
-# Welcome to your Lovable project
+# Desi Organic 🌱
 
-## Project info
+A modern, full-featured e-commerce platform for authentic, chemical-free organic food products. Built with React, TypeScript, Vite, Tailwind CSS, shadcn/ui, and Supabase.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **Storefront & Catalog**: Browse organic products categorized into pure honey, cold-pressed mustard oil, bilona ghee, dates, nuts, and authentic spices.
+- **Product Details & Reviews**: Rich product views with images, specifications, customer ratings, and testimonials.
+- **Cart & Fast Checkout**: Streamlined cart drawer, coupon discount support, delivery zone fee calculator, and order placement.
+- **Admin Dashboard**: Comprehensive back-office management including:
+  - Product & category management
+  - Order processing & status tracking
+  - Coupon & promotional banner controls
+  - Delivery zones & shipping rates
+  - Sales analytics & reporting
+  - Blog post & policy editor
+- **Customer Support**: Integrated live chat widget and direct WhatsApp ordering support.
+- **Modern Responsive Design**: Mobile-first design crafted with Tailwind CSS and Radix UI / shadcn components.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend Framework**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State & Data Fetching**: [TanStack Query (React Query)](https://tanstack.com/query)
+- **Forms & Validation**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Backend & Database**: [Supabase](https://supabase.com/) (PostgreSQL, Authentication, Realtime, Storage)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [Bun](https://bun.sh/)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. Clone the repository
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone https://github.com/murshed/desi-organic.git
+cd desi-organic
 ```
 
-**Edit a file directly in GitHub**
+### 2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm install
+# or with bun:
+bun install
+```
 
-**Use GitHub Codespaces**
+### 3. Configure environment variables
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Copy the example environment configuration:
 
-## What technologies are used for this project?
+```bash
+cp .env.example .env
+```
 
-This project is built with:
+Open `.env` and fill in your Supabase credentials:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```env
+VITE_SUPABASE_PROJECT_ID="your-project-id"
+VITE_SUPABASE_PUBLISHABLE_KEY="your-anon-or-publishable-key"
+VITE_SUPABASE_URL="https://your-project-id.supabase.co"
+```
 
-## How can I deploy this project?
+### 4. Start the development server
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+npm run dev
+# or with bun:
+bun run dev
+```
 
-## Can I connect a custom domain to my Lovable project?
+Visit `http://localhost:8080` in your browser.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📦 Build for Production
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+desi-organic/
+├── public/                 # Static assets and icons
+├── src/
+│   ├── assets/             # Product and category images
+│   ├── components/
+│   │   ├── admin/          # Admin dashboard components & dialogs
+│   │   ├── cart/           # Cart and checkout drawer
+│   │   ├── chat/           # Live chat support widget
+│   │   ├── home/           # Homepage sections (Hero, Features, Slider)
+│   │   ├── layout/         # Header, Footer, Navigation
+│   │   └── ui/             # Reusable shadcn/ui primitives
+│   ├── hooks/              # Custom React hooks
+│   ├── integrations/       # Supabase client and query helpers
+│   ├── lib/                # Utility functions
+│   ├── pages/              # Application views and routes
+│   ├── types/              # TypeScript interfaces and definitions
+│   ├── App.tsx             # Main routing and providers
+│   └── main.tsx            # React application entry point
+├── supabase/               # Supabase database migrations and configs
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
